@@ -1,0 +1,19 @@
+---
+title: "Alt Text"
+author: "Wylie Hampson"
+date: "8/19/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(palmerpenguins)
+```
+
+```{r, fig.alt = "Body mass histogram for Adelie, Chinstrap, and Gentoo penguins. With Gentoos being the largest on average"}
+ggplot(penguins,aes(x = body_mass_g)) +
+  geom_histogram() +
+  facet_wrap(~species)
+```
+
